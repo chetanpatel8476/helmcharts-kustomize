@@ -1,0 +1,24 @@
+# Default values for studentapp.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+#createNamespace: true
+#namespace: <>
+
+nameOverride: ""
+fullnameOverride: "nginx"
+
+deployment:
+  replicaCount: 1
+  image: nginx
+  imagetag: 1.14.2
+  pullPolicy: IfNotPresent
+
+service:
+  type: NodePort
+  port: 80
+  targetPort: 80
+
+nodeSelector: {}
+tolerations: []
+affinity: {}
