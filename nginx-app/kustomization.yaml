@@ -1,12 +1,6 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namePrefix: dev-
+namePrefix: cluster-a-
 resources:
   - all.yaml
-configMapGenerator:
-  - name: nginx-config
-    files:
-      - configs/index.html
-images:
-  - name: nginx
-    newTag: 1.21.1
+  - ./dev
