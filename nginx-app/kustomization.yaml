@@ -3,4 +3,4 @@ kind: Kustomization
 namePrefix: cluster-a-
 resources:
   - all.yaml
-  - ./dev/kustomization.yaml
+  - ./dev
